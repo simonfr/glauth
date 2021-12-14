@@ -6,7 +6,7 @@ if [ ! -f /app/config/config.cfg ] ; then
   echo "Copying example configuration file to run."
   mkdir -p /app/config
   cp /app/docker/default-config-standalone.cfg /app/config/config.cfg || exit 1
- fi
+fi
 
 
 echo "";

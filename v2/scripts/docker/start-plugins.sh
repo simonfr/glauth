@@ -8,7 +8,7 @@ if [ ! -f /app/config/config.cfg ] ; then
   cp /app/docker/default-config-plugins.cfg /app/config/config.cfg || exit 1
   # This file will be ignored when switching away from the default (sqlite)
   cp /app/docker/gl.db /app/config/gl.db || exit 1
- fi
+fi
 
 
 echo "";
