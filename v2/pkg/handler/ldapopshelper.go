@@ -206,7 +206,7 @@ func (l LDAPOpsHelper) Search(h LDAPOpsHandler, bindDN string, searchReq ldap.Se
 
 	bindDN = strings.ToLower(bindDN)
 	baseDN := strings.ToLower(h.GetBackend().BaseDN)
-	searchBaseDN := strings.ToLower(searchReq.BaseDN)
+	searchBaseDN := strings.ReplaceAll(strings.ToLower(searchReq.BaseDN), " ", "")
 
 	anonymous := len(bindDN) < 1
 
